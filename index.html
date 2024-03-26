@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <head> 
+  <meta charset="utf-8">
   <style>
     body{
       padding-top: 40px;
       padding-bottom: 40px;
       display: flex;
       justify-content: center;
-
-      background-color: #0f0e17;
     }
     .banner_image{
       width: 128px;
@@ -34,7 +33,7 @@
     .social-icons{
       color: #f25f4c;
       text-decoration: none;
-      justify-content: center;
+      justify-content: space-around;
     }
     .link{
       background-color: #fffffe ;
@@ -56,10 +55,30 @@
       max-width: 640px;
       flex-grow: 1;
     }
+
+    .background--custom {
+      background: linear-gradient(90deg, #F25F4C, #FF8906, #EB8988);
+      background-size: 300% 300%;
+      animation: gradient 4s alternate infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+    @keyframes gradient {
+      0% {
+        background-position: 0%;
+      }
+      100% {
+        background-position: 100%;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="items">
+    <div class="background--custom"></div>
     <div class="banner">
       <img src="pfp.png" alt="Profile Picture" class ="banner_image">
     </div>
